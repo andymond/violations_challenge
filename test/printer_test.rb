@@ -42,6 +42,6 @@ class PrinterTest < Minitest::Test
 
     violations_by_type = { type: ["violation", "violation"]}
 
-    assert_equal violations_by_type, Printer.violations_by_type
+    assert_equal violations_by_type, printer.violations_by_type
   end
 end

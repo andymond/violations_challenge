@@ -20,4 +20,10 @@ class Printer
     end
   end
 
+  def latest_violation
+    @violations.max do |row|
+      DateTime.strptime(row[:violation_date], '%Y-%m-%d')
+    end
+  end
+
 end

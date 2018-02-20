@@ -36,4 +36,12 @@ class PrinterTest < Minitest::Test
     assert_equal 43, printer.violation_types.count
     assert_instance_of Array, printer.violation_types
   end
+
+  def test_it_can_find_all_records_for_each_violation_type
+    printer = Printer.new
+
+    violations_by_type = { type: ["violation", "violation"]}
+
+    assert_equal violations_by_type, Printer.violations_by_type
+  end
 end

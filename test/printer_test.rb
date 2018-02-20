@@ -17,4 +17,10 @@ class PrinterTest < Minitest::Test
 
     assert_equal 545, printer.count_violations
   end
+
+  def test_it_can_return_earliest_violation_date
+    printer = Printer.new
+
+    assert_equal 1, printer.earliest_violation_date
+  end
 end

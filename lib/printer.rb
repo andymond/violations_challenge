@@ -14,6 +14,12 @@ class Printer
     @violations.count
   end
 
+  def violation_types
+    @violations.map do |row|
+      row[:violation_type]
+    end.uniq
+  end
+
   def earliest_violation
     @violations.min do |row|
       DateTime.strptime(row[:violation_date], '%Y-%m-%d')

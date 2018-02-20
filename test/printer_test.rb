@@ -21,6 +21,6 @@ class PrinterTest < Minitest::Test
   def test_it_can_return_earliest_violation_date
     printer = Printer.new
 
-    assert_equal 1, printer.earliest_violation_date
+    assert_equal "2012-01-03 00:00:00", printer.earliest_violation[:violation_date]
   end
 end

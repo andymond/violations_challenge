@@ -29,4 +29,11 @@ class PrinterTest < Minitest::Test
 
     assert_equal "2012-11-01 00:00:00", printer.latest_violation[:violation_date]
   end
+
+  def test_it_can_return_list_of_unique_violation_types
+    printer = Printer.new
+
+    assert_equal 43, printer.violation_types.count
+    assert_instance_of Array, printer.violation_types
+  end
 end
